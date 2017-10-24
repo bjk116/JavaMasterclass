@@ -19,7 +19,7 @@ public class GroceryList {
     }
     
     public void modifyGroceryItem(int position, String newItem) {
-        groceryList.set(position-1, newItem);
+        groceryList.set(position, newItem);
         System.out.println("Grocery item " + (position+1) + " has been modified.");
     }
     
@@ -29,6 +29,6 @@ public class GroceryList {
     
     public String findItem(String itemName) {
         int position = groceryList.indexOf(itemName);
-        return (position >= 0) ? groceryList.get(position) : "Item not Found";
+        return (position >= 0) ? groceryList.get(position) : null;
     }
 }
